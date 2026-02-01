@@ -10,5 +10,6 @@ export const typeOrmConfig = (configService: ConfigService) :TypeOrmModuleOption
     database: configService.get<string>('DATABASE_NAME') ?? 'postgres',
     entities: [__dirname + '/../**/*.entity.{js,ts}'],
     synchronize: true,
-    ssl: true
+    ssl: true,
+    logging: true
 });
